@@ -25,7 +25,7 @@ fn main() {
         println!("[{}] {} == {}", attempts, std::str::from_utf8(&password).unwrap(), password_hash);
 
         if &password_hash == wanted_hash {
-            println!("Found after {} Password = {}\n", attempts,password_hash);
+            println!("Found after {} Password = {} hash = {}\n", attempts,std::str::from_utf8(&password).unwrap(), password_hash);
             exit(0);
         }
         attempts += 1;
